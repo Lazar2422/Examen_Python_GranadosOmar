@@ -1,3 +1,27 @@
 {
-    
+    "usuarios": [
+        {
+            "ID": "1",
+            "Nombre": "Juan",
+            "Apellido": "Perez",
+            "Edad": "25",
+            "Direccion": "Calle 123",
+            "Telefono": "1234567",
+            "Planes": [
+                {
+                    "Nombre": "Prepago",
+                    "Tamano": "200mb",
+                    "Duracion": "1 dia",
+                    "Precio": 1000
+                },
+                {
+                    "Nombre": "Prepago",
+                    "Tamano": "15000mb",
+                    "Duracion": "15 dias",
+                    "Precio": 16000
+                }
+            ],
+            "Categoria": "cliente nuevo"
+        }
+    ]
 }

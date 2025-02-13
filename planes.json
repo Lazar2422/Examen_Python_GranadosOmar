@@ -26,86 +26,86 @@
             ]
         },
         {
-            "Planes Prepago":[
+            "Prepago":[
                 {
                     "Nombre":"Prepago",
-                    "Tamaño":"200mb",
+                    "Tamano":"200mb",
                     "Duracion":"1 dia",
                     "Precio":1000
 
                 },{
                     "Nombre":"Prepago",
-                    "Tamaño":"400mb",
+                    "Tamano":"400mb",
                     "Duracion":"1 dia",
                     "Precio":2000
 
                 },{
                     "Nombre":"Prepago",
-                    "Tamaño":"800mb",
+                    "Tamano":"800mb",
                     "Duracion":"3 dias",
                     "Precio":4000
 
                 },{
                     "Nombre":"Prepago",
-                    "Tamaño":"1500mb",
+                    "Tamano":"1500mb",
                     "Duracion":"5 dias",
                     "Precio":6000
 
                 },{
                     "Nombre":"Prepago",
-                    "Tamaño":"2000mb",
+                    "Tamano":"2000mb",
                     "Duracion":"7 dias",
                     "Precio":7000
 
                 },{
                     "Nombre":"Prepago",
-                    "Tamaño":"15000mb",
+                    "Tamano":"15000mb",
                     "Duracion":"15 dias",
                     "Precio":16000
 
                 },{
                     "Nombre":"Prepago",
-                    "Tamaño":"30000mb",
+                    "Tamano":"30000mb",
                     "Duracion":"30 dias",
                     "Precio":30000
 
                 }
             ]
         },{
-            "Planes Postpago":[
+            "Postpago":[
                 {
                     "Nombre":"Postpago",
-                    "Tamaño":"200mb",
+                    "Tamano":"200mb",
                     "Duracion":"1 dia",
                     "Precio":1000
                 },{
                     "Nombre":"Postpago",
-                    "Tamaño":"400mb",
+                    "Tamano":"400mb",
                     "Duracion":"1 dia",
                     "Precio":2000
                 },{
                     "Nombre":"Postpago",
-                    "Tamaño":"800mb",
+                    "Tamano":"800mb",
                     "Duracion":"3 dias",
                     "Precio":4000
                 },{
                     "Nombre":"Postpago",
-                    "Tamaño":"1500mb",
+                    "Tamano":"1500mb",
                     "Duracion":"5 dias",
                     "Precio":6000
                 },{
                     "Nombre":"Postpago",
-                    "Tamaño":"2000mb",
+                    "Tamano":"2000mb",
                     "Duracion":"7 dias",
                     "Precio":7000
                 },{
                     "Nombre":"Postpago",
-                    "Tamaño":"15000mb",
+                    "Tamano":"15000mb",
                     "Duracion":"15 dias",
                     "Precio":16000
                 },{
                     "Nombre":"Postpago",
-                    "Tamaño":"30000mb",
+                    "Tamano":"30000mb",
                     "Duracion":"30 dias",
                     "Precio":30000
                 }

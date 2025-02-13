@@ -1,5 +1,5 @@
 import json
-
+from modul import *
 def abrirJSON(ruta):
     dicFinal={}
     with open(f"./{ruta}.json",'r') as openFile:
@@ -9,3 +9,5 @@ def abrirJSON(ruta):
 def guardarJSON(ruta,dic):
     with open(f"./{ruta}.json",'w') as outFile:
         json.dump(dic,outFile)
+
+menuinterfaz()

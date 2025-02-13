@@ -1,7 +1,8 @@
 {
     "planes":[
         {
-            "Interfet fibra optica":[
+            "Nombre":"Interfet fibra optica",
+            "Planes":[
                 {
                     "Nombre":"fibra optica",
                     "Velocidad":"50mbs",
@@ -26,7 +27,8 @@
             ]
         },
         {
-            "Prepago":[
+            "Nombre":"Prepago",
+            "Planes":[
                 {
                     "Nombre":"Prepago",
                     "Tamano":"200mb",
@@ -72,7 +74,8 @@
                 }
             ]
         },{
-            "Postpago":[
+            "Nombre":"Postpago",
+            "Planes":[
                 {
                     "Nombre":"Postpago",
                     "Tamano":"200mb",

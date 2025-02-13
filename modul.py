@@ -13,13 +13,17 @@ def tipoplan():
     plan=abrirJSON("planes")
 
 def agergarUsuario():
-    diccionario=abrirJSON("usuarios")
+    diccionario=abrirJSON("clientes")
     nombre=input("Nombre del usuario: ")
     apellido=input("Apellido del usuario: ")
     edad=input("Edad del usuario: ")
     direccion=input("Direccion del usuario: ")
     contacto=input("Numero de telefono: ")
-    tipodeplan=input("Tipo de plan: ")
+    tipodeplan=[]
+    categoria="Cliente nuevo"
+    id=str(len(diccionario["usuarios"])+1)
+    diccionario["usuarios"].append({"ID":id,"Nombre":nombre,"Apellido":apellido,"Edad":edad,"Direccion":direccion,"Telefono":contacto,"Planes":tipodeplan,"Categoria":categoria})
+    guardarJSON("clientes",diccionario)
 def leerUsuarios():
     diccionario=abrirJSON("clientes")
     for i in range(len(diccionario["usuarios"])):
@@ -57,64 +61,55 @@ def editarUsuarios():
                 planes=abrirJSON("planes")
                 print("Planes disponibles: ")
                 for k in range (len(planes["planes"])):
-                    if k==0:
-                        nome="Internet Fibra optica"
-                    elif k==1:
-                        nome="Prepago"
-                    elif k==2:
-                        nome="Postpago"
+                    nome=planes["planes"][k]["Nombre"]
                     print("Presione ",k+1," para plan ", nome)
                 plan=input(": ")
                 if plan=="1":
-                        rutaces="Internet fibra optica"
-                        for q in range (len(planes["planes"][0][rutaces])):
+                        for q in range (len(planes["planes"][0]["Planes"])):
                             print("Plan ",q+1)
-                            print("Velocidaad: ",planes["planes"][i][rutaces][q]["Velocidad"])
+                            print("Velocidaad: ",planes["planes"][0]["Planes"][q]["Velocidad"])
                             if diccionario["usuarios"][i]["Categoria"]=="cliente leal":
-                                pre=planes["planes"][0][rutaces][q]["Precio"]
+                                pre=planes["planes"][0]["Planes"][q]["Planes"]["Precio"]
                                 precio=pre*0.2
                             else:
-                                precio=planes["planes"][0][rutaces][q]["Precio"]
+                                precio=planes["planes"][0]["Planes"][q]["Precio"]
                             print("Precio: ",precio)
                         numeroplan=int(input("Seleccione el numero del plan: "))
-                        diccionario["usuarios"]["Planes"].append({planes["planes"][numeroplan-1]})
                         print("Ingrese el numero del plan a añadir")
                         añad=int(input(": "))-1
-                        nuevo=planes["planes"][0][rutaces][añad]
+                        nuevo=planes["planes"][0]["Planes"][añad]
                         diccionario["usuarios"][i]["Planes"].append(nuevo)
                 elif plan=="2":
-                        rutaces="Prepago"
-                        for q in range(len(planes["planes"][1][rutaces])):
+                        for q in range(len(planes["planes"][1]["Planes"])):
                             print("Plan ", q+1)
-                            print("Duracion: ", planes["planes"][1][rutaces][q]["Duracion"])
+                            print("Duracion: ", planes["planes"][1]["Planes"][q]["Duracion"])
                             if diccionario["usuarios"][i]["Categoria"]=="cliente leal":
-                                pre=planes["planes"][1][rutaces][q]["Precio"]
+                                pre=planes["planes"][1]["Planes"][q]["Precio"]
                                 precio=pre*0.2
-                                print("Tamano: x2 ", planes["planes"][1][rutaces][q]["Tamano"])
+                                print("Tamano: x2 ", planes["planes"][1]["Planes"][q]["Tamano"])
                             else:
-                                print("Tamano: ", planes["planes"][1][rutaces][q]["Tamano"])
-                                precio=planes["planes"][1][rutaces][q]["Precio"]
+                                print("Tamano: ", planes["planes"][1]["Planes"][q]["Tamano"])
+                                precio=planes["planes"][1]["Planes"][q]["Precio"]
                             print("Precio: ",precio)
                         print("Ingrese el numero del plan a añadir")
                         añad=int(input(": "))-1
-                        nuevo=planes["planes"][1][rutaces][añad]
+                        nuevo=planes["planes"][1]["Planes"][añad]
                         diccionario["usuarios"][i]["Planes"].append(nuevo)
                 elif plan=="3":
-                        rutaces="Postpago"
-                        for q in range(len(planes["planes"][2][rutaces])):
+                        for q in range(len(planes["planes"][2]["Planes"])):
                             print("Plan ", q+1)
-                            print("Duracion: ", planes["planes"][1][rutaces][q]["Duracion"])
+                            print("Duracion: ", planes["planes"][2]["Planes"][q]["Duracion"])
                             if diccionario["usuarios"][i]["Categoria"]=="cliente leal":
-                                pre=planes["planes"][2][rutaces][q]["Precio"]
+                                pre=planes["planes"][2]["Planes"][q]["Precio"]
                                 precio=pre*0.2
-                                print("Tamano: x2", planes["planes"][2][rutaces][q]["Tamano"])
+                                print("Tamano: x2", planes["planes"][2]["Planes"][q]["Tamano"])
                             else:
-                                print("Tamano: ", planes["planes"][2][rutaces][q]["Tamano"])
-                                precio=planes["planes"][2][rutaces][q]["Precio"]
+                                print("Tamano: ", planes["planes"][2]["Planes"][q]["Tamano"])
+                                precio=planes["planes"][2]["Planes"][q]["Precio"]
                             print("Precio: ",precio)    
                         print("Ingrese el numero del plan a añadir")
                         añad=int(input(": "))-1
-                        nuevo=planes["planes"][2][rutaces][añad]
+                        nuevo=planes["planes"][2]["Planes"][añad]
                         diccionario["usuarios"][i]["Planes"].append(nuevo)
             elif opcion=="7":
                 print("Ingrese el numero de años que ha estado en la empresa")
@@ -154,11 +149,82 @@ def menuUser():
             f=False
         else:
             print("Opcion invalida")
+def menuplanes():
+    planes=abrirJSON("planes")
+    print("Que desea hacer?")
+    print("1 para añadir planes || 2 para editar planes || 3 para eliminar planes || 4 para salir")
+    opcion=input(":")
+    if opcion=="1":
+        for i in range(len(planes["planes"])):
+            print("Servicio ",i+1, planes["planes"][i]["Nombre"])
+        nombre=int(input("A cual servicio quiere añadir planes? "))-1
+        if planes["planes"][nombre]["Nombre"]=="Internet fibra optica":
+            velocidad=input("Ingrese la velocidad del plan")
+            precio=int(input("Ingrese el precio del plan: "))
+            planes["planes"][nombre]["Planes"].append({"Nombre":"fibra optica","Velocidad":velocidad,"Precio":precio})
+        else:
+            tamaño=input("Ingrese el tamaño del plan: ")
+            duracion=input("Ingrese la duracion del plan")
+            precio=input("Ingrese el precio del plan: ")
+            if nombre==1:
+                planes["planes"][nombre]["Planes"].append({"Nombre":"Prepago","Tamano":tamaño,"Duracion":duracion,"Precio":precio})
+            else:
+                planes["planes"][nombre]["Planes"].append({"Nombre":"Postpago","Tamano":tamaño,"Duracion":duracion,"Precio":precio})
+    if opcion=="2":
+        if opcion=="1":
+            for i in range(len(planes["planes"])):
+                print("Servicio ",i+1, planes["planes"][i]["Nombre"])
+            nombre=int(input("A cual servicio quiere editar planes? "))-1
+            for i in range(len(planes["planes"][nombre]["Planes"])):
+                print("Presione ", i+1, " para editar el plan ", i+1)
+            numeroplan=input(": ")
+            if planes["planes"][nombre]["Nombre"]=="Internet fibra optica":
+                velocidad=input("Ingrese la velocidad del plan")
+                precio=int(input("Ingrese el precio del plan: "))
+                planes["planes"][nombre]["Planes"][numeroplan]["Velocidad"]=velocidad
+                planes["planes"][nombre]["Planes"][numeroplan]["Precio"]=precio
+            else:
+                tamaño=input("Ingrese el tamaño del plan: ")
+                duracion=input("Ingrese la duracion del plan")
+                precio=input("Ingrese el precio del plan: ")
+                planes["planes"][nombre]["Planes"][numeroplan]["Tamano"]=tamaño
+                planes["planes"][nombre]["Planes"][numeroplan]["Duracion"]=duracion
+                planes["planes"][nombre]["Planes"][numeroplan]["Precio"]=precio
+            guardarJSON("planes",planes)
+    if opcion=="3":
+        for i in range(len(planes["planes"])):
+            print("Servicio ",i+1, planes["planes"][i]["Nombre"])
+        nombre=int(input("A cual servicio quiere eliminar un plan? "))-1
+        for i in range(len(planes["planes"][nombre]["Planes"])):
+            print("Presione ", i+1, " para editar el plan ", i+1)
+        numeroplan=input(": ")
+        planes["planes"][nombre]["Planes"].pop(numeroplan)
+        guardarJSON("planes",planes)
+    if opcion=="4":
+        print("Adios ")
+def reportes():
+    diccionario=abrirJSON("clientes")
+    planes=abrirJSON("planes")
+    print("Numero de servicios ofrecidos por lal empresa: ", len(planes["planes"]))
+    print("Servicios adquiridos por los clientes: ")
+    for i in range (len(diccionario["usuarios"])):
+        for q in range(len(diccionario["usuarios"][i]["Planes"])):
+            print(diccionario["usuarios"][i]["Planes"][q]["Nombre"])
+            print(diccionario["usuarios"][i]["Planes"][q]["Tamano"])
+            print(diccionario["usuarios"][i]["Planes"][q]["Duracion"])
+            print(diccionario["usuarios"][i]["Planes"][q]["Precio"])
+            print("")
 def menuinterfaz():
     tru=True
     while tru==True:
         print("Bienvenido, a que modulo desea ingresar?")
-        print("1 modulo de usuario || 2 modulo de planes || 3 historial de usuarios || 4 para modulo de reportes || 5 para salir")
+        print("1 modulo de usuario || 2 modulo de planes || 3 para modulo de reportes || 4 para salir")
         opt=input(":")
         if opt=="1":
             menuUser()
+        if opt=="2":
+            menuplanes()
+        if opt=="3":
+            reportes()
+        if opt=="4":
+            tru=False

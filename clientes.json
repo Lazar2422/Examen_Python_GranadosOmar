@@ -19,9 +19,32 @@
                     "Tamano": "15000mb",
                     "Duracion": "15 dias",
                     "Precio": 16000
+                },
+                {
+                    "Nombre": "Prepago",
+                    "Tamano": "30000mb",
+                    "Duracion": "30 dias",
+                    "Precio": 30000
                 }
             ],
             "Categoria": "cliente nuevo"
+        },
+        {
+            "ID": "2",
+            "Nombre": "egar",
+            "Apellido": "barragan",
+            "Edad": "19",
+            "Direccion": "villanueva",
+            "Telefono": "291382",
+            "Planes": [
+                {
+                    "Nombre": "Postpago",
+                    "Tamano": "30000mb",
+                    "Duracion": "30 dias",
+                    "Precio": 30000
+                }
+            ],
+            "Categoria": "Cliente nuevo"
         }
     ]
 }

@@ -1,0 +1,116 @@
+{
+    "planes":[
+        {
+            "Interfet fibra optica":[
+                {
+                    "Nombre":"fibra optica",
+                    "Velocidad":"50mbs",
+                    "Precio":15000
+                },{
+                    "Nombre":"fibra optica",
+                    "Velocidad":"100mbs",
+                    "Precio":30000
+                },{
+                    "Nombre":"fibra optica",
+                    "Velocidad":"200mbs",
+                    "Precio":50000
+                },{
+                    "Nombre":"fibra optica",
+                    "Velocidad":"400mbs",
+                    "Precio":80000
+                },{
+                    "Nombre":"fibra optica",
+                    "Velocidad":"500mbs",
+                    "Precio":90000
+                }
+            ]
+        },
+        {
+            "Planes Prepago":[
+                {
+                    "Nombre":"Prepago",
+                    "Tamaño":"200mb",
+                    "Duracion":"1 dia",
+                    "Precio":1000
+
+                },{
+                    "Nombre":"Prepago",
+                    "Tamaño":"400mb",
+                    "Duracion":"1 dia",
+                    "Precio":2000
+
+                },{
+                    "Nombre":"Prepago",
+                    "Tamaño":"800mb",
+                    "Duracion":"3 dias",
+                    "Precio":4000
+
+                },{
+                    "Nombre":"Prepago",
+                    "Tamaño":"1500mb",
+                    "Duracion":"5 dias",
+                    "Precio":6000
+
+                },{
+                    "Nombre":"Prepago",
+                    "Tamaño":"2000mb",
+                    "Duracion":"7 dias",
+                    "Precio":7000
+
+                },{
+                    "Nombre":"Prepago",
+                    "Tamaño":"15000mb",
+                    "Duracion":"15 dias",
+                    "Precio":16000
+
+                },{
+                    "Nombre":"Prepago",
+                    "Tamaño":"30000mb",
+                    "Duracion":"30 dias",
+                    "Precio":30000
+
+                }
+            ]
+        },{
+            "Planes Postpago":[
+                {
+                    "Nombre":"Postpago",
+                    "Tamaño":"200mb",
+                    "Duracion":"1 dia",
+                    "Precio":1000
+                },{
+                    "Nombre":"Postpago",
+                    "Tamaño":"400mb",
+                    "Duracion":"1 dia",
+                    "Precio":2000
+                },{
+                    "Nombre":"Postpago",
+                    "Tamaño":"800mb",
+                    "Duracion":"3 dias",
+                    "Precio":4000
+                },{
+                    "Nombre":"Postpago",
+                    "Tamaño":"1500mb",
+                    "Duracion":"5 dias",
+                    "Precio":6000
+                },{
+                    "Nombre":"Postpago",
+                    "Tamaño":"2000mb",
+                    "Duracion":"7 dias",
+                    "Precio":7000
+                },{
+                    "Nombre":"Postpago",
+                    "Tamaño":"15000mb",
+                    "Duracion":"15 dias",
+                    "Precio":16000
+                },{
+                    "Nombre":"Postpago",
+                    "Tamaño":"30000mb",
+                    "Duracion":"30 dias",
+                    "Precio":30000
+                }
+            ]
+        }
+
+        ]
+}

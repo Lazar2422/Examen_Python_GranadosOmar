@@ -1,4 +1,5 @@
-# Contenido
+# ![Examen Python](imagenes/python.jpeg)
+
 supuestamente aqui hare mi primer proyecto "profesional" asi que bienvenido a mis inicios
 
 # Titulo y Descripción
@@ -17,7 +18,7 @@ Aquí encontrarás mi primer proyecto "profesional" con github y python a su ves
 
 Utilizamos el comando git pull con el enlace del respositorio, seria algo asi:
 
-"git pull (https://https://github.com/Lazar2422/Examen_Python_GranadosOmar)"
+"git pull https://https://github.com/Lazar2422/Examen_Python_GranadosOmar"
 
 Explicación
 

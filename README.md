@@ -1,12 +1,9 @@
 # ![Examen Python](imagenes/python.jpeg)
 
-supuestamente aqui hare mi primer proyecto "profesional" asi que bienvenido a mis inicios
 
-# Titulo y Descripción
+# Examen Python
 
-Primer Proyecto "Profesional"
-
-Aquí encontrarás mi primer proyecto "profesional" con github y python a su ves que te lo estare explicando, asi que bienvenido :D
+Aqui explicare mi proyecto/examen de python y un breve repaso de como usarlo
 
 # Tabla de contenidos
 
@@ -16,9 +13,15 @@ Aquí encontrarás mi primer proyecto "profesional" con github y python a su ves
 
 # Instalación
 
-Utilizamos el comando git pull con el enlace del respositorio, seria algo asi:
+- Creamos una carpeta donde vayamos a descargar el proyecto
 
-"git pull https://https://github.com/Lazar2422/Examen_Python_GranadosOmar"
+- Abrimos la terminal con la direccion de la carpeta
+
+- Utilizamos el comando git pull con el enlace del respositorio, seria algo asi:
+
+	"git clone https://https://github.com/Lazar2422/Examen_Python_GranadosOmar"
+
+- luego abrimos nuestra carpeta en un editor de codigo
 
 Explicación
 
